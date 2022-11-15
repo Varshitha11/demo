@@ -27,13 +27,6 @@ public class CourseController {
 		return "index";
 	}
 	
-	@GetMapping("/new")
-    public String showNewCoursePage(Model model) {
-        Course course = new Course();
-        model.addAttribute("course", course);
-        return "index";
-    }
-	
 	 @PostMapping("/save")
 	    public String saveCourses(@ModelAttribute("course") Course course) {
 	        service.saveCourses(course);
