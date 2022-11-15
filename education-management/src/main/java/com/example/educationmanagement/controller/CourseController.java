@@ -20,7 +20,7 @@ public class CourseController {
 	@Autowired
 	private CourseService service;
 	
-	@GetMapping("/")
+	@GetMapping("/allList")
 	public String  viewHomePage(Model model) {
 		List<Course> course = service.getAllCourses();
 		model.addAttribute("getAllCourses",course);
@@ -40,16 +40,7 @@ public class CourseController {
 	        
 	        return "index";
 	    }
-	 @GetMapping("/showCourseUpdate/{id}")
-		public String showCourseUpdate(@PathVariable ( value = "id") long id, Model model) {
-			
-			// get employee from the service
-			Course course = service.getCourseById(id);
-			
-			// set employee as a model attribute to pre-populate the form
-			model.addAttribute("course", course);
-			return "index";
-		}
+	
 	 @GetMapping("/deleteCourse/{id}")
 		public String deleteCourse(@PathVariable (value = "id") long id) {
 			
