@@ -32,7 +32,7 @@ public class CourseController {
 	
 	@GetMapping("/edit")
 	public ModelAndView  editCourse(@RequestParam("id") long id) {
-		ModelAndView mv=new ModelAndView("NewFile");
+		ModelAndView mv=new ModelAndView("editCourses");
 		Course course=service.getCourseById(id);
 		mv.addObject("courses", course);
 		return mv;
@@ -56,5 +56,16 @@ public class CourseController {
 			mv.setViewName("courses");
 			return mv;
 		}
+	 
+	 @GetMapping("/add")
+	 public ModelAndView  addNewCourse(Model model) {
+		 ModelAndView mv=new ModelAndView("addNewCourses");
+		 mv.addObject("courses", new Course());
+		return mv;
+		 
+	 }
+	 
+	 
+	 
 
 }

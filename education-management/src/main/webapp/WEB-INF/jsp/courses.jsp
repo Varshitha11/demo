@@ -9,8 +9,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1 align="center">education-management</h1>
-
+	<h1 align="center">The Global Education center</h1>
+    <br>
+    <h3 align ="center"><a href="/add" class="btn btn-sm btn-danger">Create new courses</a></h3>
+    
 	<div align="center">
 		<table border="2" width="70%" cellpadding="2">
 			<thead>
