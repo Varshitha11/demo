@@ -9,7 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1 align="center">The Global Education center</h1>
+	<h1 align="center" style ="text-decoration:underline">The Global Education center</h1>
     <br>
     <h3 align ="center"><a href="/add" class="btn btn-sm btn-danger">Create new courses</a></h3>
     
@@ -24,6 +24,7 @@
 					<th>ACTIONS</th>
 				</tr>
 			</thead>
+			<tbody style="text-align:center">
 			<c:forEach var="course" items="${courses}">
 				<tr>
 					<td>${course.courseId}</td>
@@ -32,12 +33,11 @@
 					<td>${course.fees}</td>
 					<td><a href="deleteCourse?id=${course.courseId}" class="btn btn-sm btn-danger">delete</a>
 					<a href="/edit?id=${course.courseId}" class="btn btn-sm btn-danger">edit</a>
-					
-					
 					</td>
 				</tr>
 
 			</c:forEach>
+			</tbody>
 
 		</table>
 	</div>
