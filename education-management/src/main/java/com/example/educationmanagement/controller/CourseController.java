@@ -30,18 +30,24 @@ public class CourseController {
 		return mv;
 	}
 	
-	
-	 @GetMapping("/save")
-	    public String saveCourses(@ModelAttribute("course") Course course) {
+	@GetMapping("/edit")
+	public ModelAndView  editCourse(@RequestParam("id") long id) {
+		ModelAndView mv=new ModelAndView("NewFile");
+		Course course=service.getCourseById(id);
+		mv.addObject("courses", course);
+		return mv;
+		
+	}
+	 @PostMapping("/save")
+	    public ModelAndView saveCourses(@ModelAttribute("course") Course course) {
+		 ModelAndView mv=new ModelAndView("redirect:/data");
 	        service.saveCourses(course);
-	        
-	        return "allcourse";
+	        return mv;
 	    }
 	
 	
 	 @GetMapping("/deleteCourse")
 		public ModelAndView deleteCourse(@RequestParam("id") long id) {
-			
 			// call delete employee method 
 		    service.deleteCourseById(id);
 			ModelAndView mv=new ModelAndView();

@@ -8,28 +8,6 @@
 
 	<h1 align="center">education-management</h1>
 
-	<div align="center">
-		<table border="2" width="70%" cellpadding="2">
-			<thead>
-				<tr>
-					<th>CODE</th>
-					<th>NAME</th>
-					<th>Duration</th>
-					<th>fees</th>
-					<th>ACTIONS</th>
-				</tr>
-			</thead>
-			<tbody>
-
-				<c:forEach var="course" items="${courses}">
-					<td>${course.courseId}</td>
-					<td>${course.courseName}</td>
-					<td>${course.duration}</td>
-					<td>${course.fees}</td>
-					<td><a href="./data"  class="btn btn-primary">add team</a></td>
-				</c:forEach>
-			</tbody>
-		</table>
-	</div>
+	
 </body>
 </html>
