@@ -19,15 +19,15 @@ class EducationManagementApplicationTests {
 
 	@Test
 	void contextLoads() {
-		
+		/*
 		CourseRepository repository = context.getBean(CourseRepository.class);
 		Course course = new Course();
 		
-		course.setCourseId(1L);
+		course.setCourseId(2L);
 		course.setCourseName("btech");
-		course.setDuration(1);
+		course.setDuration(5);
 		course.setFees(500d);
-		repository.save(course);
+		repository.save(course);*/
 		
 	}
 

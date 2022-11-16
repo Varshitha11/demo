@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:oracle:thin:@localhost:1521/xe
+    url: jdbc:oracle:thin:@localhost:1521:xe
     username: sys as sysdba
     password: admin@123
     driver-class-name: oracle.jdbc.OracleDriver
@@ -15,6 +15,6 @@ spring:
       prefix: /WEB-INF/jsp/
       suffix: .jsp
 
-debug: true
+
 
  

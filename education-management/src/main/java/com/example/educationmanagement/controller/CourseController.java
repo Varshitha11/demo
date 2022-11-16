@@ -10,36 +10,45 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.example.educationmanagement.entity.Course;
 import com.example.educationmanagement.service.CourseService;
 
-@Controller
+@RestController
 public class CourseController {
 
 	@Autowired
 	private CourseService service;
 	
-	@GetMapping("/allList")
-	public String  viewHomePage(Model model) {
-		List<Course> course = service.getAllCourses();
-		model.addAttribute("getAllCourses",course);
-		return "index";
+	@GetMapping("/data")
+	public ModelAndView  viewHomePage(Model model) {
+		ModelAndView mv=new ModelAndView("courses");
+		mv.addObject("courses",service.getAllCourses());
+		return mv;
 	}
 	
-	 @PostMapping("/save")
+	
+	 @GetMapping("/save")
 	    public String saveCourses(@ModelAttribute("course") Course course) {
 	        service.saveCourses(course);
 	        
-	        return "index";
+	        return "allcourse";
 	    }
 	
-	 @GetMapping("/deleteCourse/{id}")
-		public String deleteCourse(@PathVariable (value = "id") long id) {
+	
+	 @GetMapping("/deleteCourse")
+		public ModelAndView deleteCourse(@RequestParam("id") long id) {
 			
 			// call delete employee method 
-			this.service.deleteCourseById(id);
-			return "redirect:/";
+		    service.deleteCourseById(id);
+			ModelAndView mv=new ModelAndView();
+			List<Course> list = service.getAllCourses();
+			mv.addObject("courses",list);
+			mv.setViewName("courses");
+			return mv;
 		}
 
 }
