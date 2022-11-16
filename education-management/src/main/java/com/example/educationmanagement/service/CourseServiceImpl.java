@@ -10,8 +10,8 @@ import com.example.educationmanagement.entity.Course;
 import com.example.educationmanagement.repo.CourseRepository;
 
 @Service
-public class CourseServiceImpl implements CourseService{
-	
+public class CourseServiceImpl implements CourseService {
+
 	@Autowired
 	private CourseRepository courseRepository;
 
@@ -25,7 +25,7 @@ public class CourseServiceImpl implements CourseService{
 	public void saveCourses(Course course) {
 		// TODO Auto-generated method stub
 		this.courseRepository.save(course);
-		
+
 	}
 
 	@Override
@@ -39,11 +39,10 @@ public class CourseServiceImpl implements CourseService{
 		// TODO Auto-generated method stub
 		Optional<Course> optional = courseRepository.findById(id);
 		Course course = null;
-		if(optional.isPresent()) {
-			course= optional.get();
-		}
-		else {
-			throw new RuntimeException("course not found by id" +id);
+		if (optional.isPresent()) {
+			course = optional.get();
+		} else {
+			throw new RuntimeException("course not found by id" + id);
 		}
 		return course;
 	}

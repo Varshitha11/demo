@@ -31,8 +31,9 @@
 					<td>${course.courseName}</td>
 					<td>${course.duration}</td>
 					<td>${course.fees}</td>
-					<td><a href="deleteCourse?id=${course.courseId}" class="btn btn-sm btn-danger">delete</a>
-					<a href="/edit?id=${course.courseId}" class="btn btn-sm btn-danger">edit</a>
+					<td><a href="/edit?id=${course.courseId}" class="btn btn-sm btn-danger">edit</a>
+					<a href="deleteCourse?id=${course.courseId}" class="btn btn-sm btn-danger">Remove</a>
+					
 					</td>
 				</tr>
 

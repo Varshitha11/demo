@@ -10,31 +10,36 @@ public class Course {
 	private String courseName;
 	private Double fees;
 	private Integer duration;
+
 	public Long getCourseId() {
 		return courseId;
 	}
+
 	public void setCourseId(Long courseId) {
 		this.courseId = courseId;
 	}
+
 	public String getCourseName() {
 		return courseName;
 	}
+
 	public void setCourseName(String courseName) {
 		this.courseName = courseName;
 	}
+
 	public Double getFees() {
 		return fees;
 	}
+
 	public void setFees(Double fees) {
 		this.fees = fees;
 	}
+
 	public Integer getDuration() {
 		return duration;
 	}
+
 	public void setDuration(Integer duration) {
 		this.duration = duration;
 	}
-	
-	
-
 }
