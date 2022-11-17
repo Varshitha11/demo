@@ -9,7 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1 align="center" style ="text-decoration:underline">The Global Education center</h1>
+	<h1 align="center" style ="text-decoration:underline ">The Global Education center</h1>
     <br>
     <h3 align ="center"><a href="/add" class="btn btn-sm btn-danger">Create new courses</a></h3>
     
@@ -19,8 +19,8 @@
 				<tr>
 					<th>CODE</th>
 					<th>NAME</th>
-					<th>Duration</th>
-					<th>fees</th>
+					<th>DURATION(in months)</th>
+					<th>FEES</th>
 					<th>ACTIONS</th>
 				</tr>
 			</thead>
