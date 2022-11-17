@@ -7,8 +7,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.example.educationmanagement.entity.Course;
-import com.example.educationmanagement.repo.CourseRepository;
+
+
 
 @RunWith(SpringRunner.class)
 @SpringBootTest

@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Service;
 
 import com.example.educationmanagement.entity.Course;
@@ -46,5 +47,4 @@ public class CourseServiceImpl implements CourseService {
 		}
 		return course;
 	}
-
 }

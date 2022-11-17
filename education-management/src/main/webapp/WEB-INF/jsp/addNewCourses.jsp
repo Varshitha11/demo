@@ -9,15 +9,15 @@
 <title>add new course</title>
 </head>
 <body>
-	<h2 align="center">Add New Course</h2>
-	<h4 align="center">* marked items entry is compulsory</h4>
+	<h2 align="center" style =" color : orange ; font-style:italic" >Add New Course</h2>
+	<h4 align="center" style =" color : red">* marked items entry is compulsory</h4>
 	<div align="center">
 		<form:form action="/save" method="post" modelAttribute="courses">
 
 			<table>
 				<tr>
 					<td>The Course Number:</td>
-					<td><input type="text" name="courseId" "></td>
+					<td><input type="text" name="courseId" ></td>
 				</tr>
 				<tr>
 					<td>The course Name:</td>

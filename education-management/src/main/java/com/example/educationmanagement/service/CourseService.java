@@ -1,7 +1,6 @@
 package com.example.educationmanagement.service;
 
 import java.util.List;
-
 import com.example.educationmanagement.entity.Course;
 
 public interface CourseService {
@@ -12,5 +11,4 @@ public interface CourseService {
 	void deleteCourseById(long id);
 
 	Course getCourseById(long id);
-
 }
