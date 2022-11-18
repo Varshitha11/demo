@@ -9,12 +9,14 @@
 <title>Course Details</title>
 </head>
 <body>
-	<h1 align="center" style ="text-decoration:underline ;color : orange;font-style:italic">
-	The Global Education center</h1>
-    <br>
-    <h3 align ="center" style=" font-style:italic"><a href="/add" class="btn btn-sm btn-danger">
-    Create new courses</a></h3>
-    
+	<h1 align="center"
+		style="text-decoration: underline; color: orange; font-style: italic">
+		The Global Education center</h1>
+	<br>
+	<h3 align="center" style="font-style: italic">
+		<a href="/add" class="btn btn-sm btn-danger"> Create new courses</a>
+	</h3>
+
 	<div align="center">
 		<table border="2" width="70%" cellpadding="2">
 			<thead>
@@ -26,20 +28,20 @@
 					<th>ACTIONS</th>
 				</tr>
 			</thead>
-			<tbody style="text-align:center">
-			<c:forEach var="course" items="${courses}">
-				<tr>
-					<td>${course.courseId}</td>
-					<td>${course.courseName}</td>
-					<td>${course.duration}</td>
-					<td>${course.fees}</td>
-					<td><a href="/edit?id=${course.courseId}" class="btn btn-sm btn-danger">edit</a>
-					<a href="deleteCourse?id=${course.courseId}" class="btn btn-sm btn-danger">Remove</a>
-					
-					</td>
-				</tr>
+			<tbody style="text-align: center">
+				<c:forEach var="course" items="${courses}">
+					<tr>
+						<td>${course.courseId}</td>
+						<td>${course.courseName}</td>
+						<td>${course.duration}</td>
+						<td>${course.fees}</td>
+						<td><a href="/edit?id=${course.courseId}"
+							class="btn btn-sm btn-danger">edit</a> <a
+							href="deleteCourse?id=${course.courseId}"
+							class="btn btn-sm btn-danger">Remove</a></td>
+					</tr>
 
-			</c:forEach>
+				</c:forEach>
 			</tbody>
 
 		</table>

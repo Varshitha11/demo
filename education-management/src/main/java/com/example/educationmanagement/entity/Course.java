@@ -1,8 +1,6 @@
 package com.example.educationmanagement.entity;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
@@ -11,11 +9,11 @@ import javax.validation.constraints.NotNull;
 public class Course {
 	@Id
 	private Long courseId;
-	@NotEmpty(message="enter valid course name")
+	@NotEmpty(message = "enter valid course name")
 	private String courseName;
-	@NotNull(message="enter valid fee")
+	@NotNull(message = "enter valid fee")
 	private Double fees;
-	@NotNull(message="enter valid duration")
+	@NotNull(message = "enter valid duration")
 	private Integer duration;
 
 	public Long getCourseId() {

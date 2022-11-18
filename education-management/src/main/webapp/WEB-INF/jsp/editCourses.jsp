@@ -11,8 +11,10 @@
 
 </head>
 <body>
-	<h2 align="center" style =" color : orange;font-style:italic">Edit Course Fee And Duration</h2>
-	<h4 align="center"  style =" color : red">* marked items entry is compulsory</h4>
+	<h2 align="center" style="color: orange; font-style: italic">Edit
+		Course Fee And Duration</h2>
+	<h4 align="center" style="color: red">* marked items entry is
+		compulsory</h4>
 	<div align="center">
 		<form:form action="/save" method="post" modelAttribute="courses">
 			<table>

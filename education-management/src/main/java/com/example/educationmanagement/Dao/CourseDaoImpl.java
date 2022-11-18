@@ -52,16 +52,12 @@ public class CourseDaoImpl implements CourseDao {
 	@Override
 	public Long generateId() {
 		// TODO Auto-generated method stub
-				Long val = courseRepository.findMaxCourseId();
-				if(val == null)
-					val = 101L;
-				else
-					val = val+1;
-				return val;
+		Long val = courseRepository.findMaxCourseId();
+		if (val == null)
+			val = 101L;
+		else
+			val = val + 1;
+		return val;
 	}
 
-	
-	
-
-	
 }
