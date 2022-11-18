@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Course Details</title>
 </head>
 <body>
 	<h1 align="center" style ="text-decoration:underline ;color : orange;font-style:italic">
