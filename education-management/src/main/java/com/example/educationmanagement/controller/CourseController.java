@@ -1,7 +1,5 @@
 package com.example.educationmanagement.controller;
 
-import java.util.List;
-
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,12 +45,9 @@ public class CourseController {
 
 	@GetMapping("/deleteCourse")
 	public ModelAndView deleteCourse(@RequestParam("id") long id) {
-		// call delete employee method
+		
+		ModelAndView mv = new ModelAndView("redirect:/start");
 		dao.deleteCourseById(id);
-		ModelAndView mv = new ModelAndView();
-		List<Course> list = dao.getAllCourses();
-		mv.addObject("courses", list);
-		mv.setViewName("courses");
 		return mv;
 	}
 
