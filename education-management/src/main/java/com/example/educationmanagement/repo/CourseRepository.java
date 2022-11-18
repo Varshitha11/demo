@@ -5,4 +5,5 @@ import com.example.educationmanagement.entity.Course;
 
 public interface CourseRepository extends JpaRepository<Course, Long> {
 
+		
 }

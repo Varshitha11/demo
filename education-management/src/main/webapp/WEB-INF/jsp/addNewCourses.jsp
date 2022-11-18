@@ -17,7 +17,7 @@
 			<table>
 				<tr>
 					<td>The Course Number:</td>
-					<td><input type="text" name="courseId" ></td>
+					<td><input type="text" name="courseId"  ></td>
 				</tr>
 				<tr>
 					<td>The course Name:</td>

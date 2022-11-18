@@ -56,6 +56,7 @@ public class CourseController {
 
 	@GetMapping("/add")
 	public ModelAndView addNewCourse(Model model) {
+		
 		ModelAndView mv = new ModelAndView("addNewCourses");
 		mv.addObject("courses", new Course());
 		return mv;

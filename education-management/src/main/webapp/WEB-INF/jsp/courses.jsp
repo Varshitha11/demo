@@ -12,7 +12,8 @@
 	<h1 align="center" style ="text-decoration:underline ;color : orange;font-style:italic">
 	The Global Education center</h1>
     <br>
-    <h3 align ="center" style=" font-style:italic"><a href="/add" class="btn btn-sm btn-danger">Create new courses</a></h3>
+    <h3 align ="center" style=" font-style:italic"><a href="/add" class="btn btn-sm btn-danger">
+    Create new courses</a></h3>
     
 	<div align="center">
 		<table border="2" width="70%" cellpadding="2">
