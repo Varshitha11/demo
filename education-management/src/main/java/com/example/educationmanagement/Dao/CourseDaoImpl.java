@@ -1,4 +1,4 @@
-package com.example.educationmanagement.service;
+package com.example.educationmanagement.Dao;
 
 import java.util.List;
 import java.util.Optional;
@@ -12,7 +12,7 @@ import com.example.educationmanagement.repo.CourseRepository;
 
 @Service
 @Repository
-public class CourseServiceImpl implements CourseService {
+public class CourseDaoImpl implements CourseDao {
 
 	@Autowired
 	private CourseRepository courseRepository;

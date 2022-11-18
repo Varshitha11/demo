@@ -11,26 +11,26 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.example.educationmanagement.Dao.CourseDao;
 import com.example.educationmanagement.entity.Course;
-import com.example.educationmanagement.service.CourseService;
 
 @RestController
 public class CourseController {
 
 	@Autowired
-	private CourseService service;
+	private CourseDao dao;
 
 	@GetMapping("/start")
 	public ModelAndView viewHomePage(Model model) {
 		ModelAndView mv = new ModelAndView("courses");
-		mv.addObject("courses", service.getAllCourses());
+		mv.addObject("courses", dao.getAllCourses());
 		return mv;
 	}
 
 	@GetMapping("/edit")
 	public ModelAndView editCourse(@RequestParam("id") long id) {
 		ModelAndView mv = new ModelAndView("editCourses");
-		Course course = service.getCourseById(id);
+		Course course = dao.getCourseById(id);
 		mv.addObject("courses", course);
 		return mv;
 
@@ -39,16 +39,16 @@ public class CourseController {
 	@PostMapping("/save")
 	public ModelAndView saveCourses(@ModelAttribute("course") Course course) {
 		ModelAndView mv = new ModelAndView("redirect:/start");
-		service.saveCourses(course);
+		dao.saveCourses(course);
 		return mv;
 	}
 
 	@GetMapping("/deleteCourse")
 	public ModelAndView deleteCourse(@RequestParam("id") long id) {
 		// call delete employee method
-		service.deleteCourseById(id);
+		dao.deleteCourseById(id);
 		ModelAndView mv = new ModelAndView();
-		List<Course> list = service.getAllCourses();
+		List<Course> list = dao.getAllCourses();
 		mv.addObject("courses", list);
 		mv.setViewName("courses");
 		return mv;
