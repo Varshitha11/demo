@@ -4,14 +4,18 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class Course {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long courseId;
+	@NotEmpty(message="enter valid course name")
 	private String courseName;
+	@NotNull(message="enter valid fee")
 	private Double fees;
+	@NotNull(message="enter valid duration")
 	private Integer duration;
 
 	public Long getCourseId() {

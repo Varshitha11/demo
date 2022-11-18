@@ -11,5 +11,7 @@ public interface CourseDao {
 	void deleteCourseById(long id);
 
 	Course getCourseById(long id);
+	
+	public Long generateId();
 		
 }

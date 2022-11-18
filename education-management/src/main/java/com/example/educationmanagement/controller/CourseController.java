@@ -58,7 +58,10 @@ public class CourseController {
 	public ModelAndView addNewCourse(Model model) {
 		
 		ModelAndView mv = new ModelAndView("addNewCourses");
-		mv.addObject("courses", new Course());
+		Long id = dao.generateId();
+		Course course = new Course();
+		course.setCourseId(id);
+		mv.addObject("courses", course);
 		return mv;
 
 	}
