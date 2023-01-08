@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.example.MovieService.Repo.MovieRepository;
 import com.example.MovieService.entity.Movies;
+import com.example.MovieService.entity.Show;
 
 @Service
 public class MovieService {
@@ -36,5 +37,11 @@ public class MovieService {
 		 List<Movies> movies = movieRepo.getMoviesFromTheatre(theatreId);
 		 return movies;
 	 }
+	 
+	 public List<Movies> getMoviesByTime(String time){
+			List<Movies> movies = movieRepo.findMovieByTime(time);
+			return movies;
+			
+		}
 
 }

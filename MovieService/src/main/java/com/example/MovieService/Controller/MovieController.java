@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.MovieService.entity.Movies;
+import com.example.MovieService.entity.Show;
 import com.example.MovieService.service.MovieService;
 
 @RestController
@@ -21,6 +22,7 @@ public class MovieController {
 	@Autowired
 	private MovieService movieService;
 	
+	//searchByTitle
 	@GetMapping("/movie/{title}")
     public Movies getMovieByTitle(@RequestParam("title") String title) {
         return movieService.getMoviesByTitle(title);
@@ -51,6 +53,13 @@ public class MovieController {
 		 
 		 return movies.stream().collect(Collectors.toSet()).stream().toList();
 	 }
+	
+	@GetMapping("/SearchByTime/{time}")
+	public List<Movies> SearchByTime(@PathVariable("time") String time){
+		List<Movies> movies = movieService.getMoviesByTime(time);
+		return movies.stream().collect(Collectors.toSet()).stream().toList();
+		
+	}
 	 
 	 
 }

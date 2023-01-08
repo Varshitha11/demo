@@ -1,6 +1,7 @@
 package com.example.MovieService.Controller;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -35,4 +36,11 @@ public class TheatreController {
 	public Theatre getTheatreById(@PathVariable Integer id) {
 		return theatreService.getTheatreById(id);
 	}
+	
+	@GetMapping("/getTheatreFromMovieId/{movieid}")
+	 public List<Theatre> getMoviesFromTheatre(@PathVariable("movieid") int movieid){
+		 List<Theatre> theatre = theatreService.getTheatreFromMovieid(movieid);
+		 
+		 return theatre.stream().collect(Collectors.toSet()).stream().toList();
+	 }
 }

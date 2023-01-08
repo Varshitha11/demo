@@ -30,5 +30,10 @@ public class TheatreService {
 	public Theatre getTheatreById(Integer id) {
 		return theatreRepository.findById(id).get();
 	}
+	
+	 public List<Theatre> getTheatreFromMovieid(Integer movieid){
+		 List<Theatre> theatre = theatreRepository.getTheatreFromMovies(movieid);
+		 return theatre;
+	 }
 
 }
