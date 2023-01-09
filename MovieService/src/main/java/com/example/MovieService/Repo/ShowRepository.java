@@ -12,6 +12,6 @@ import com.example.MovieService.entity.Show;
 @Repository
 public interface ShowRepository extends JpaRepository<Show, Integer>{
     
-	@Query(value = " SELECT *FROM movie,show where movie.id = show.movie_id and movie.id =:movieid" , nativeQuery = true)
+	@Query(value = " SELECT *FROM movie join show ON movie.id = show.movie_id where show.movie_id =:movieid" , nativeQuery = true)
 	List<Show> getShowsFromMovieid(@Param("movieid")   Integer movieid);
 }
